@@ -1,5 +1,5 @@
 node {
     stage("Run") {
-        sh "echo from:${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT} - to: ${env.GIT_COMMIT}"
+        sh "echo from:$GIT_PREVIOUS_SUCCESSFUL_COMMIT - to: $GIT_COMMIT"
     }
 }
