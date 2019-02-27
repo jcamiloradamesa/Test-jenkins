@@ -1,5 +1,5 @@
 node {
     stage("Run") {
-        sh "run.sh"
+        sh "./run.sh"
     }
 }
