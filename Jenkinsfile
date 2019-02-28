@@ -1,11 +1,7 @@
 node {
     stage("Run") {
 
-        def projectX =  checkout([$class: 'GitSCM',
-            branches: [[name: 'origin/master']],
-            extensions: [[$class: 'WipeWorkspace']],
-            userRemoteConfigs: [[credentialsId: 'GH-RO', url: 'https://github.com/jcamiloradamesa/Test-jenkins']]
-        ])
+        def projectX =  checkout scm
 
         env.GIT_PREVIOUS_COMMIT = projectX.GIT_PREVIOUS_COMMIT
         env.GIT_COMMIT = projectX.GIT_COMMIT
