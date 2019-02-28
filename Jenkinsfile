@@ -8,7 +8,7 @@ node {
         ])
 
         env.GIT_PREVIOUS_COMMIT = projectX.GIT_PREVIOUS_COMMIT
-        env.GIT_PREVIOUS_COMMIT = projectX.GIT_COMMIT
-        println "from:${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT} - to: ${env.GIT_COMMIT}"
+        env.GIT_COMMIT = projectX.GIT_COMMIT
+        println "from:${env.GIT_PREVIOUS_COMMIT} - to: ${env.GIT_COMMIT}"
     }
 }
