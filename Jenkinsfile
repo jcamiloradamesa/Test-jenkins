@@ -2,7 +2,7 @@ node {
     stage("Run") {
 
         def projectX =  checkout([$class: 'GitSCM',
-            url: 'https://github.com/jcamiloradamesa/Test-jenkins'  branches: [[name: 'origin/master']],
+            branches: [[name: 'origin/master']],
             extensions: [[$class: 'WipeWorkspace']],
             userRemoteConfigs: [[credentialsId: 'GH-RO', url: 'https://github.com/jcamiloradamesa/Test-jenkins']]
         ])
